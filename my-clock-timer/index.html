@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock & Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <p class="eyebrow">A SIMPLE TIME TOOL</p>
+    <h1>Clock & Timer</h1>
+
+    <section class="panel clock-panel" aria-labelledby="clock-heading">
+      <h2 id="clock-heading">Current time</h2>
+      <div id="clock" class="clock" aria-live="off">--:--:--</div>
+      <p id="date" class="date">Loading date…</p>
+    </section>
+
+    <section class="panel timer-panel" aria-labelledby="timer-heading">
+      <h2 id="timer-heading">Countdown timer</h2>
+
+      <div class="timer-display" id="timer-display" aria-live="polite">05:00</div>
+
+      <div class="time-inputs">
+        <label>
+          Minutes
+          <input id="minutes-input" type="number" min="0" max="999" value="5">
+        </label>
+        <label>
+          Seconds
+          <input id="seconds-input" type="number" min="0" max="59" value="0">
+        </label>
+      </div>
+
+      <div class="timer-buttons">
+        <button id="start-button" type="button">Start</button>
+        <button id="pause-button" type="button" class="secondary">Pause</button>
+        <button id="reset-button" type="button" class="secondary">Reset</button>
+      </div>
+
+      <p id="timer-status" class="status" aria-live="polite">Set a time and press Start.</p>
+    </section>
+  </main>
+</body>
+</html>

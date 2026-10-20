@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="quiz-app">
+    <header class="quiz-header">
+      <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+      <h1>Quick Quiz</h1>
+      <p class="intro">Answer five questions and see your score.</p>
+    </header>
+
+    <section id="quiz-screen" class="quiz-card" aria-live="polite">
+      <div class="quiz-meta">
+        <span id="question-count">Question 1 of 5</span>
+        <span id="score-label">Score: 0</span>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <h2 id="question">Question text appears here</h2>
+      <div id="answer-buttons" class="answer-buttons"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+
+      <button id="next-button" class="primary-button" type="button" hidden>
+        Next question
+      </button>
+    </section>
+
+    <section id="result-screen" class="quiz-card result-card" hidden>
+      <p class="eyebrow">QUIZ COMPLETE</p>
+      <h2>Your result</h2>
+      <p id="result-message" class="result-message"></p>
+      <button id="restart-button" class="primary-button" type="button">
+        Try again
+      </button>
+    </section>
+  </main>
+</body>
+</html>
